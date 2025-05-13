@@ -1,6 +1,6 @@
-# eXSS Scanner GUI
+# oXSS Scanner GUI
 
-eXSS is a simple Cross-Site Scripting (XSS) vulnerability scanner with a graphical user interface (GUI). It helps you find potential XSS vulnerabilities on websites by crawling pages, identifying input points (like URL parameters and forms), and testing them with various XSS payloads.
+oXSS is a simple Cross-Site Scripting (XSS) vulnerability scanner with a graphical user interface (GUI). It helps you find potential XSS vulnerabilities on websites by crawling pages, identifying input points (like URL parameters and forms), and testing them with various XSS payloads.
 
 **Disclaimer:** This tool is for educational and ethical testing purposes only. Always obtain explicit permission before scanning any website or system. Unauthorized scanning can be illegal.
 
@@ -44,12 +44,12 @@ Before you can run the scanner, you need to have Python installed on your comput
 
 ## How to Run
 
-1.  Save the Python code into a file named `eXSS.py` (or any `.py` extension).
+1.  Save the Python code into a file named `oXSS.py` (or any `.py` extension).
 2.  Open your terminal or command prompt.
 3.  Navigate to the directory where you saved the file.
 4.  Run the script using the command:
     ```bash
-    python eXSS.py
+    python oXSS.py
     ```
 5.  The GUI window should appear.
 
