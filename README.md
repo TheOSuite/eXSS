@@ -1,98 +1,116 @@
-# oXSS Scanner GUI
+# oXSS - Advanced GUI-Based XSS Scanner
 
-oXSS is a simple Cross-Site Scripting (XSS) vulnerability scanner with a graphical user interface (GUI). It helps you find potential XSS vulnerabilities on websites by crawling pages, identifying input points (like URL parameters and forms), and testing them with various XSS payloads.
+![GitHub License](https://img.shields.io/github/license/TheOSuite/oXSS)
+![Python Version](https://img.shields.io/badge/python-3.13-blue)
+![Last Updated](https://img.shields.io/date/2025-07-21)
 
-**Disclaimer:** This tool is for educational and ethical testing purposes only. Always obtain explicit permission before scanning any website or system. Unauthorized scanning can be illegal.
+Welcome to **oXSS**, an open-source, feature-rich GUI-based tool for detecting Cross-Site Scripting (XSS) vulnerabilities in web applications. Built with Python, Tkinter, Selenium, and multithreading, oXSS provides an intuitive interface for security researchers and penetration testers to scan websites for reflected, DOM, and stored XSS vulnerabilities. This tool is designed for educational purposes and must only be used on systems with explicit permission.
 
 ## Features
 
-*   **GUI Interface:** Easy-to-use graphical interface built with Tkinter.
-*   **Scan Types:**
-    *   **Crawl and Scan:** Start from a URL, crawl the website to find more pages and input forms, and then scan all discovered injection points.
-    *   **Scan Single URL (GET/POST):** Scan only the parameters found in the query string of a single URL and forms on that page.
-    *   **Scan Single URL (DOM):** Use a headless browser (Selenium) to test for DOM-based XSS on a specific page and a target HTML element.
-*   **Injection Point Discovery:** Automatically identifies URL parameters (GET) and form fields (GET/POST) during crawling or single-URL scans.
-*   **Payloads:**
-    *   Includes a built-in list of common XSS payloads.
-    *   Allows loading custom payloads from a text file.
-*   **Headers and Cookies:** Option to include custom HTTP headers and cookies in scan requests.
-*   **Multi-threading:** Uses threading to speed up the scanning process (for GET/POST scans).
-*   **Timeout:** Configure a timeout for requests to avoid hanging on slow responses.
-*   **Results:** Displays potential vulnerabilities in a results area.
-*   **Report Saving:** Save findings to a text report file.
-*   **Stop Scan:** Allows you to stop a running scan gracefully.
+- **GUI Interface**: User-friendly Tkinter-based interface for configuring and monitoring scans.
+- **Multiple Scan Types**: Supports Crawl and Scan, Single URL (GET/POST), DOM, and Stored XSS scanning.
+- **Advanced Crawling**: Utilizes a priority-based crawler with sitemap parsing, event-driven JS interactions, and API endpoint discovery.
+- **WAF Detection**: Identifies common Web Application Firewalls (e.g., Cloudflare, AWS WAF) with bypass payload support.
+- **Multithreading**: Leverages multiple threads for efficient scanning of large sites.
+- **Payload Management**: Load custom payloads from files and use contextual payload sets.
+- **Authentication Support**: Handles login forms for authenticated scans.
+- **Reporting**: Export results in TXT, HTML, or JSON formats.
+- **State Management**: Pause, resume, and save scan states for later continuation.
+- **Stealth Features**: Random user-agent rotation and configurable delays to avoid detection.
 
-## Requirements
+## Installation
 
-Before you can run the scanner, you need to have Python installed on your computer, along with several Python libraries.
+### Prerequisites
+- Python 3.13 or higher
+- Ensure the following dependencies are installed:
+  - `requests`
+  - `beautifulsoup4`
+  - `selenium`
+  - `webdriver-manager`
+  - `lxml`
 
-1.  **Python 3:** Download and install the latest version of Python 3 from [python.org](https://www.python.org/). Make sure to check the box that says "Add Python to PATH" during installation (especially on Windows).
-2.  **Required Python Libraries:** Open your terminal or command prompt and run the following command to install the necessary libraries:
-    ```bash
-    pip install requests beautifulsoup4 selenium
-    ```
-3.  **WebDriver (for DOM scanning):** The DOM scanning feature requires a web browser driver. Google Chrome and ChromeDriver are commonly used.
-    *   **Install Google Chrome:** If you don't have it, download and install Google Chrome from [google.com/chrome/](https://www.google.com/chrome/).
-    *   **Download ChromeDriver:** You need a version of ChromeDriver that matches your Chrome browser version.
-        *   Check your Chrome version by going to `chrome://version/` in your Chrome browser.
-        *   Go to the [ChromeDriver Downloads page](https://chromedriver.chromium.org/downloads).
-        *   Find the ChromeDriver version that corresponds to your Chrome version.
-        *   Download the appropriate zip file for your operating system.
-        *   Extract the zip file. You will find an executable file named `chromedriver` (or `chromedriver.exe` on Windows).
-        *   **Option A (Recommended):** Place the `chromedriver` executable in a directory that is included in your system's PATH. This allows Python to find it automatically.
-        *   **Option B (Manual Path):** If you can't or don't want to add it to your PATH, you'll need to set the `CHROME_DRIVER_PATH` variable in the Python script to the full path of the `chromedriver` executable.
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/oXSS.git
+   cd oXSS
+   ```
 
-## How to Run
+2. **Install Dependencies**
+   Create a virtual environment (optional but recommended) and install required packages:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-1.  Save the Python code into a file named `oXSS.py` (or any `.py` extension).
-2.  Open your terminal or command prompt.
-3.  Navigate to the directory where you saved the file.
-4.  Run the script using the command:
-    ```bash
-    python oXSS.py
-    ```
-5.  The GUI window should appear.
+3. **Run the Script**
+   Launch the GUI:
+   ```bash
+   python oXSS.py
+   ```
 
-## How to Use
+   **Note**: Ensure Chrome browser is installed, as `webdriver-manager` will automatically download the matching ChromeDriver.
 
-1.  **Target URL:** Enter the full URL of the website or page you want to scan (e.g., `https://example.com/`).
-2.  **Scan Type:** Select the type of scan you want to perform:
-    *   `Crawl and Scan`: Starts crawling from the Target URL.
-    *   `Scan Single URL (GET/POST)`: Only scans the parameters of the Target URL and forms found on that specific page.
-    *   `Scan Single URL (DOM)`: Scans the Target URL specifically for DOM XSS by interacting with an element. Requires you to specify the `DOM Element Selector`.
-3.  **DOM Element Selector (for DOM Scan):** If you chose "Scan Single URL (DOM)", enter the CSS selector for the HTML element you want to test (e.g., `#search-input`, `.comment-box`, `input[name="user_data"]`).
-4.  **Timeout (s):** Set the maximum time in seconds to wait for a response from the server or for browser actions.
-5.  **Threads (for GET/POST scans):** Set the number of threads to use for concurrent scanning. More threads can be faster but may put more load on the target server.
-6.  **Load Payloads from File:** (Optional) Click this button to select a text file containing additional XSS payloads (one payload per line). If you don't load a file, the scanner will use its built-in default payloads. The label will show how many payloads are loaded.
-7.  **Headers and Cookies:** (Optional) Enter custom HTTP headers (like `Cookie: sessionid=abc123`) and cookies (like `mycookie=myvalue`) if needed for authenticated or specific testing. Enter one header/cookie per line in the format `Key: Value` or `key=value`.
-8.  **Start Scan:** Click this button to begin the scan.
-9.  **Stop Scan:** Click this button to stop a running scan.
-10. **Scan Results:** The text area will show the progress and any potential XSS vulnerabilities found.
-11. **Save Report:** After the scan finishes (or is stopped), if any vulnerabilities were found, this button will become active. Click it to save the findings to a text file.
+## Usage
 
-## Understanding the Results
+1. **Configure Scan**
+   - Enter the target URL in the "Target URL" field.
+   - Select the scan type (e.g., Crawl and Scan, DOM Scan).
+   - For DOM scans, specify the CSS selector of the input element.
+   - Adjust timeout, threads, max depth, proxy, and blacklist as needed.
+   - Load payloads from a `.txt` file or use defaults.
+   - Add headers, cookies, or authentication details if required.
 
-The "Scan Results" area will display messages indicating the scanner's activity (crawling URLs, testing parameters, etc.).
+2. **Start Scan**
+   - Click "Start Scan" to begin. Monitor progress in the "Scan Results" window.
+   - Use "Pause Scan" or "Stop Scan" to control the process.
+   - Resume paused scans with "Resume Scan".
 
-If a potential vulnerability is found, you will see a line similar to this:
-  [VULNERABLE] Potential XSS found: Payload '<script>alert('XSS')</script>' reflected in response for parameter 'search'
-  
-This tells you:
+3. **View Results**
+   - Vulnerabilities are displayed in real-time with details (URL, payload, etc.).
+   - Save reports using "Save Report" in TXT, HTML, or JSON format.
 
-*   `[VULNERABLE]`: The scanner suspects an XSS vulnerability.
-*   `Potential XSS found`: A possible finding.
-*   `Payload '...' reflected`: The specific payload that was used.
-*   `in response for parameter '...'`: Where the payload was found to be reflected (the parameter name).
-*   Details about the injection point type (URL Parameter, Form, DOM), method (GET, POST, DOM), and the URL tested will also be logged above this line.
+4. **Profiles**
+   - Save or load scan configurations using the "Save Profile" and "Load Profile" buttons.
 
-**Note:** This is an automated scanner. It may produce false positives (reporting a vulnerability where none exists) or miss some vulnerabilities. Always manually verify any findings.
+## Known Issues and Workarounds
 
-Suggestions for contributions include:
+- **GPU Errors**: Logs may show `Failed to create GLES3 context` errors due to headless mode on some systems. This is a known Selenium/ChromeDriver issue and does not affect functionality. To minimize, ensure `--disable-gpu` and `--disable-software-rasterizer` are included (already implemented).
+- **Selenium Instability**: If the WebDriver crashes, the script attempts to reinitialize it. Ensure no stale `chromedriver.exe` processes are running (check Task Manager and terminate if needed).
+- **Performance**: Large sites may be slow due to Selenium overhead. Consider reducing thread count or using a proxy for faster requests.
 
-*   Adding more advanced XSS payloads.
-*   Implementing different detection methods (e.g., checking for specific JavaScript execution).
-*   Improving the crawling logic (e.g., handling JavaScript links).
-*   Adding support for other injection points (headers, cookies, JSON).
-*   Enhancing the UI or reporting features.
+## Contributing
 
+Contributions are welcome! To contribute:
 
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/awesome-feature`).
+3. Commit your changes (`git commit -m "Add awesome feature"`).
+4. Push to the branch (`git push origin feature/awesome-feature`).
+5. Open a Pull Request.
+
+### Guidelines
+- Follow PEP 8 style guidelines.
+- Add tests or documentation for new features.
+- Address any feedback from maintainers.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Inspired by modern DAST tools like Burp Suite and Invicti.
+- Built with open-source libraries: Tkinter, Selenium, BeautifulSoup, etc.
+- Thanks to the security community for insights into XSS detection techniques.
+
+## Future Enhancements
+
+- **AI-Powered Payloads**: Integrate machine learning for dynamic payload generation.
+- **Real-Time Charts**: Add progress visualization (e.g., URLs crawled, vulns found).
+- **Proxy Rotation**: Support rotating proxies for better stealth.
+- **Blind XSS**: Implement out-of-band detection with a callback server.
+
+For issues or suggestions, please open an issue on the [GitHub Issues page](https://github.com/TheOSuite/oXSS/issues).
